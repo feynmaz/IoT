@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function runScript() {
+            let response = await fetch(url = 'process_a_guest')
+            response.text()
+            .then((res) => {
+                console.log(res)
+            })
+            .catch(() => {
+                console.log('Ошибка!')
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Имитация получения данных</h1>
+
+    <div>
+        <input type="button" value='Проверить гостя' onclick="runScript()">
+        </form>
+    </div>
+</body>
+
+</html>
